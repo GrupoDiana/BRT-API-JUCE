@@ -1,3 +1,38 @@
+
+/**
+* \class CConfiguratorInterface
+*
+* \brief Declaration of CConfiguratorInterface class
+* \date November 2026
+*
+* \authors 3DI-DIANA Research Group (University of Malaga) 
+* \b Contact: areyes@uma.es
+*
+* \b Copyright: University of Malaga
+*
+* \b Contributions: (additional authors/contributors can be added here)
+*
+* \b Project: BRT API JUCE
+*
+* \b Description: Abstract base class defining the common acoustic
+* configuration structure for BRT-based audio plugins. It manages two
+* listener models: CListenerDirectHRTFConvolutionModel for direct sound
+* binaural rendering and CListenerAmbisonicReverberantVirtualLoudspeakersModel
+* for reverberation processing. It also manages a CFreeFieldEnvironmentModel
+* to represent the acoustic environment. Additionally, it provides common
+* functionality for listener positioning, sound source management and
+* loading acoustic resources, including HRTF, BRIR and near-field
+* compensation filters. Specific configurations implement the setup and
+* sound source connection procedures.
+*
+* \b Licence: This program is free software, you can redistribute it and/or
+* modify it under the terms of the GNU General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*/
+
+
+
 #include <BRTLibrary.h>
 #include "AppUtils.hpp"
 #include "../OSC/OSCLogger.hpp"

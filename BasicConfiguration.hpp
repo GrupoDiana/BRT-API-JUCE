@@ -1,4 +1,31 @@
 
+/**
+* \class CBasicConfiguration
+*
+* \brief Declaration of CBasicConfiguration class
+* \date November 2026
+*
+* \authors 3DI-DIANA Research Group (University of Malaga)
+* \b Contact: areyes@uma.es
+*
+* \b Copyright: University of Malaga
+*
+* \b Contributions: (additional authors/contributors can be added here)
+*
+* \b Project: BRT API JUCE
+*
+* \b Description: Implements a basic acoustic configuration for BRT-based
+* audio plugins. It initializes the listener, HRTF and reverberation models,
+* configures the acoustic environment, manages sound source connections
+* and loads the required acoustic resources from SOFA files.
+*
+* \b Licence: This program is free software, you can redistribute it and/or
+* modify it under the terms of the GNU General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*/
+
+
 #include <BRTLibrary.h>
 #include "BRT_API_Juce.h"
 

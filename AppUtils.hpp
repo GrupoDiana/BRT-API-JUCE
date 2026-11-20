@@ -1,3 +1,28 @@
+/**
+* \class AppUtils
+*
+* \brief Declaration of AppUtils class
+* \date November 2026
+*
+* \authors 3DI-DIANA Research Group (University of Malaga) 
+* \b Contact: areyes@uma.es
+*
+* \b Copyright: University of Malaga
+*
+* \b Contributions: (additional authors/contributors can be added here)
+*
+* \b Project: BRT API JUCE
+*
+* \b Description: Provides utility functions for loading acoustic resources
+* from SOFA files, including HRTF, BRIR and near-field compensation filters.
+* It also provides error reporting through a common error message interface.
+*
+* \b Licence: This program is free software, you can redistribute it and/or
+* modify it under the terms of the GNU General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*/
+
 #include <string>
 #include <BRTLibrary.h>
 
