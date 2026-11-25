@@ -35,7 +35,6 @@
 
 #include <BRTLibrary.h>
 #include "AppUtils.hpp"
-#include "../OSC/OSCLogger.hpp"
 
 #ifndef _CONFIGURATOR_INTERFACE_HPP_
 #define _CONFIGURATOR_INTERFACE_HPP_
@@ -54,7 +53,7 @@ public:
 
     virtual ~CConfiguratorInterface() = default;
 
-    virtual void Setup(OSCLogger& logger) = 0;
+    virtual void Setup() = 0;
 
     virtual bool ConnectSoundSource(const std::string& _soundSourceID) = 0;
 
@@ -89,7 +88,7 @@ public:
     }
 
     template<typename T>
-    bool LoadHRTF(std::shared_ptr<T> listenerModel, const std::string& filePath, OSCLogger& logger) {
+    bool LoadHRTF(std::shared_ptr<T> listenerModel, const std::string& filePath) {
 
         std::shared_ptr<BRTServices::CSphericalInterpolatedFIRTable> hrtf = std::make_shared<BRTServices::CSphericalInterpolatedFIRTable>();
 
@@ -111,7 +110,7 @@ public:
     }
 
     template<typename T>
-    bool LoadBRIR(std::shared_ptr<T> listenerModel, const std::string& filePath, float _fadeIn, float _riseTime, float _fadeOut, float _fallTime, OSCLogger& logger)
+    bool LoadBRIR(std::shared_ptr<T> listenerModel, const std::string& filePath, float _fadeIn, float _riseTime, float _fadeOut, float _fallTime)
     {
         auto brir = std::make_shared<BRTServices::CSphericalFIRTable>();
 
@@ -136,7 +135,7 @@ public:
     }
 
     template<typename T>
-    bool LoadNearfield(std::shared_ptr<T> listenerModel, const std::string& filePath, OSCLogger& logger)
+    bool LoadNearfield(std::shared_ptr<T> listenerModel, const std::string& filePath)
     {
         std::shared_ptr<BRTServices::CSphericalSOSTable> sosFilter = std::make_shared<BRTServices::CSphericalSOSTable>();
 

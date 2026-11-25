@@ -29,7 +29,6 @@
 #include <BRTLibrary.h>
 #include "BRT_API_Juce.h"
 
-#include "OSC/OSCLogger.hpp"
 
 #ifndef _BASIC_CONFIGURATION_HPP_
 #define _BASIC_CONFIGURATION_HPP_
@@ -44,7 +43,7 @@ namespace BRTJUCE {
     public:
         CBasicConfiguration() = default;
 
-        void Setup(OSCLogger& logger) override {
+        void Setup() override {
 
             brtManager.BeginSetup();
 
@@ -89,7 +88,7 @@ namespace BRTJUCE {
         }
 
         //LoadResources
-        bool LoadResources(OSCLogger& logger) {
+        bool LoadResources() {
 
             auto resourcesPath = juce::File::getSpecialLocation(juce::File::currentExecutableFile).getParentDirectory().getParentDirectory().getChildFile("Resources");
 
